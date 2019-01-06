@@ -62,7 +62,7 @@ export default class Wordlist extends React.Component {
                                 onPress={() => {
                                     Actions.Worddetail({word: item.word, url: item.url, content: item.content})
                                 }}
-                                TouchableOpacity={0.7}
+                                TouchableOpacity={1.0}
                             >
                                 <View style={styles.wordlistView}>
                                     <View style={{flex: 7, marginLeft: 20}}>
