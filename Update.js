@@ -60,7 +60,7 @@ export default class Update extends React.Component {
         Keyboard.dismiss();
 
         var text = "새 요청\n" + inputWord + "\n\n" + inputExplain;
-        console.warn(api);
+
         await axios.get(api, {
             params: {
                 token: token,
