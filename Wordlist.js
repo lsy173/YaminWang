@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Dimensions, TouchableOpacity } from 'react-native';
-import data from './data.json';
 import { SearchableFlatList } from "react-native-searchable-list";
 import { Actions } from 'react-native-router-flux';
 import { Entypo } from '@expo/vector-icons';
+import axios from 'axios';
 
 const { height, width } = Dimensions.get("window");
 
@@ -29,6 +29,7 @@ export default class Wordlist extends React.Component {
                     onChangeText={searchTerm => this.setState({ searchTerm })}
                     autoCorrect={false}
                     underlineColorAndroid={"transparent"}
+                    placeholderTextColor={"white"}
                 />
         
                 <SearchableFlatList
@@ -60,10 +61,12 @@ export default class Wordlist extends React.Component {
         );
     }
 
-    _loadData = () => {
+    _loadData = async() => {
+        var data = await axios.get("https://raw.githubusercontent.com/lsy173/YaminWang/master/data.json");
+        data = data.data;
         this.setState({
             wordList: data
-        });
+        })
     }
 
 }
@@ -74,7 +77,9 @@ const styles = StyleSheet.create({
         height: 50,
         paddingLeft: 17,
         borderBottomWidth: StyleSheet.hairlineWidth,
-        borderBottomColor: "gray"
+        borderBottomColor: "gray",
+        backgroundColor: "#55595C",
+        color: "white"
     },
     list: {
         width: width,

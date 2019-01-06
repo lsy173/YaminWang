@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Dimensions, WebView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Dimensions, WebView } from 'react-native';
 
 const { height, width } = Dimensions.get("window");
 
@@ -18,7 +18,9 @@ export default class Worddetail extends React.Component {
             return (
                 <View>
                     <Text style={{fontSize: 20, textAlign: "center", marginTop: 15}}>{word}</Text>
-                    <Text style={{marginTop: 20, padding: 20}}>{content}</Text>
+                    <ScrollView style={{height: height-100}}>
+                        <Text style={{marginTop: 20, padding: 20}}>{content}</Text>
+                    </ScrollView>
                 </View>
             )
         }
