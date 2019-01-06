@@ -19,12 +19,13 @@ export default class App extends React.Component {
   render() {
     return (
       <Router backAndroidHandler={this._onBackPress}>
-          <Scene key="root" >
+        <Scene key="root" hideTabBar>
+          <Scene tabs={true} hideNavBar>
             <Scene key="Wordlist" initial={true} title='야민정음 용어' component={Wordlist}/>
             {/* <Scene key="Addword" title='야민정음 등록'/> */}
-            <Scene key="Worddetail" title='용어 설명' component={Worddetail} />
           </Scene>
-        
+          <Scene key="Worddetail" title='용어 설명' component={Worddetail} />
+        </Scene> 
       </Router>
     );
   }

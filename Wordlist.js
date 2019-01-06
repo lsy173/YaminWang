@@ -25,7 +25,7 @@ export default class Wordlist extends React.Component {
         return (
             <View>
                 <TextInput
-                    style={styles.search} placeholder={"야민정음 검색"}
+                    style={styles.search} placeholder={"야민정음 단어를 검색하세요."}
                     onChangeText={searchTerm => this.setState({ searchTerm })}
                     autoCorrect={false}
                     underlineColorAndroid={"transparent"}
