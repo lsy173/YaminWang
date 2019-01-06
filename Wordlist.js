@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
     },
     list: {
         width: width,
+        marginBottom: 20,
         borderBottomWidth: StyleSheet.hairlineWidth,
         borderBottomColor: "gray"
     },
