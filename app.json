@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "YaminWang",
+    "name": "야민정음",
     "slug": "YaminWang",
     "privacy": "public",
     "sdkVersion": "31.0.0",
@@ -13,7 +13,7 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -23,7 +23,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "yamin.wang.com"
+    },
+    "android": {
+      "package": "yamin.wang.com",
+      "versionCode": 1,
+      "permissions": []
     }
   }
 }
